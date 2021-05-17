@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "import/no-extraneous-dependencies": [
+      2,
+      { "devDependencies": ["**/test.tsx", "**/test.ts"] }
+    ],
+    "@typescript-eslint/indent": [2, 2],
+    "@typescript-eslint/no-unused-vars": 0,
+    "no-unused-expressions": ["error"],
+    "no-undef": ["error"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "@typescript-eslint/ban-ts-comment": ["warn"],
+    "prettier/prettier": "error",
+    "import/extensions": 0,
+    "import/prefer-default-export": 0,
+    "no-nested-ternary": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/require-default-props": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
